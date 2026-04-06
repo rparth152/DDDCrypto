@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CryptoWebAPI.Application/CryptoWebAPI.Application.csproj" />
+  <Project Path="CryptoWebAPI.Domain/CryptoWebAPI.Domain.csproj" />
+  <Project Path="CryptoWebAPI.Infrastructure/CryptoWebAPI.Infrastructure.csproj" />
+  <Project Path="CryptoWebAPI/CryptoWebAPI.csproj" />
+</Solution>
