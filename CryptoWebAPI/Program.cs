@@ -6,6 +6,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using AutoMapper;
+using CryptoWebAPI.Application.Mapping;
+using Fluent.Infrastructure.FluentModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,7 +42,10 @@ builder.Services.AddAuthentication(options =>
 
 });
 builder.Services.AddAuthorization();
+
 builder.Services.AddScoped<ILogin, Login>();
+builder.Services.AddScoped<IUsers, Users>();
+builder.Services.AddAutoMapper(typeof(Mapping));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

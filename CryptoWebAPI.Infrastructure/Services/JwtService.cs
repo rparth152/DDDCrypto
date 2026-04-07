@@ -18,12 +18,12 @@ namespace CryptoWebAPI.Infrastructure.Services
             this.db = db;
             this.configuration = configuration; 
         }
-        public async Task<LoginDTO> Authenticate(LoginDTO dto) {
-            if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.PassWord))
-                return null;
-            var useraccount = await db.Users.FirstOrDefaultAsync(x => x.Email == dto.Email);
-            if (useraccount is null || !PasswordHashHandler.VerifyPassword(dto.PassWord, useraccount.PassWord))
-                return null;
-                    }
+        //public async Task<LoginDTO> Authenticate(LoginDTO dto) {
+        //    if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.PassWord))
+        //        return null;
+        //    var useraccount = await db.Users.FirstOrDefaultAsync(x => x.Email == dto.Email);
+        //    if (useraccount is null || !PasswordHashHandler.VerifyPassword(dto.PassWord, useraccount.PassWord))
+        //        return null;
+        //            }
     }
 }
